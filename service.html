@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Developer Sayam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #8e2de2;
+            --secondary-purple: #4a00e0;
+            --gradient-purple: linear-gradient(135deg, #8e2de2, #4a00e0);
+            --white: #ffffff;
+            --grey-text: #666666;
+        }
+
+        .purple-side-bar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--gradient-purple);
+            z-index: 10;
+        }
+
+        .title-purple {
+            color: var(--primary-purple);
+            margin-bottom: 10px;
+        }
+
+        .btn-contact-header {
+            background: var(--gradient-purple);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-contact-header:hover {
+            opacity: 0.9;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-purple);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="purple-side-bar"></div>
+
+    <div class="page-container">
+        <header>
+            <a href="index.html" class="logo">
+                <span class="logo-circle"></span>
+                Sayam
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html" class="active">Service</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-contact-header">Contact</a>
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <section class="page-section">
+                <h1 class="page-title">My Services</h1>
+                <p class="page-description">
+                    I provide development services for both Minecraft servers and Discord bots. Whether you're starting a new community or upgrading an existing one, I can help bring your ideas to life with powerful features and clean systems.
+                </p>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <h3 class="title-purple">Minecraft Server Setups</h3>
+                    <p class="page-description" style="font-size: 1rem;">Full custom setups for Survival, Skyblock, Lifesteal, and more – optimized, clean, and unique.</p>
+
+                    <h3 class="title-purple" style="margin-top:20px;">Discord Bot Development</h3>
+                    <p class="page-description" style="font-size: 1rem;">Feature-rich bots with moderation, economy, welcome systems, games, and custom commands.</p>
+
+                    <h3 class="title-purple" style="margin-top:20px;">Plugin Configuration</h3>
+                    <p class="page-description" style="font-size: 1rem;">Professional configuration for popular plugins like LuckPerms, EssentialsX, TAB, ItemsAdder, and more.</p>
+
+                    <h3 class="title-purple" style="margin-top:20px;">Custom Menus & GUIs</h3>
+                    <p class="page-description" style="font-size: 1rem;">Sleek and user-friendly interfaces for shops, crates, warps, and other server features.</p>
+
+                    <h3 class="title-purple" style="margin-top:20px;">Performance Optimization</h3>
+                    <p class="page-description" style="font-size: 1rem;">Lag reduction, plugin tuning, and best practices to ensure smooth server performance.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    burgerMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

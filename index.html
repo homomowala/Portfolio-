@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AiNX - Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+</head>
+<body>
+    <!-- Changed class name from red-side-bar to purple-side-bar -->
+    <div class="purple-side-bar"></div>
+
+    <div class="page-container">
+        <header>
+            <a href="index.html" class="logo">
+                <span class="logo-circle"></span>
+                AiNX
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-contact-header">Contact</a>
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <section id="home" class="hero-section">
+                <div class="hero-content">
+                    <h1>Hi, I'm AiNX</h1>
+                    <h2 class="role-title">Minecraft/Discord Developer</h2>
+                    <p class="description">
+                        A developer who makes game look more futuristic. A discord
+                        developer with crazy for developing. Hire me to make your game or community server more futuristic.
+                    </p>
+                    <div class="social-links">
+                        <p>Find Me on</p>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord-f"></i></a>
+                        <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-hire">Hire me</a>
+                    </div>
+                </div>
+                <div class="hero-image-area">
+                    <div class="decorative-circles">
+                        <div class="circle c1"></div>
+                        <div class="circle c2"></div>
+                        <div class="circle c3"></div>
+                    </div>
+                    <img src="assets/hero-image.jpg" alt="Sophia, Web Designer" class="hero-photo" />
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    burgerMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact AiNX - Discord & Minecraft Developer</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Button styles for social links */
+    .social-links {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .social-links p {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .social-links a.button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      cursor: pointer;
+      background: linear-gradient(135deg, #7b2ff7, #f107a3); /* purple gradient */
+      border: none;
+    }
+    .social-links a.button:hover {
+      background: linear-gradient(135deg, #f107a3, #7b2ff7);
+    }
+    /* Discord button override (keep blue) */
+    .social-links a.discord {
+      background-color: #5865f2;
+    }
+    .social-links a.discord:hover {
+      background-color: #4752c4;
+    }
+    /* Icon style inside buttons */
+    .social-links i {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Changed class from red-side-bar to purple-side-bar -->
+  <div class="purple-side-bar"></div>
+
+  <div class="page-container">
+    <header>
+      <a href="index.html" class="logo">
+        <span class="logo-circle"></span>
+        AiNX
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-contact-header active">Contact</a>
+      <button class="burger-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-section">
+        <h1 class="page-title">Get In Touch</h1>
+        <p class="page-description">
+          Have a project in mind or just want to say hello? I'd love to hear from
+          you! Fill out the form below, or reach out via my social channels.
+        </p>
+
+        <form
+          action="YOUR_FORMSPREE_ENDPOINT_HERE"
+          method="POST"
+          class="contact-form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="6"
+            required
+          ></textarea>
+          <button type="submit" class="btn btn-submit">Send Message</button>
+        </form>
+
+        <div class="social-links">
+          <p>Or find me here:</p>
+          <a
+            href="https://discord.gg/nxTznunYUm"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button discord"
+            aria-label="Discord"
+          >
+            <i class="fab fa-discord"></i> Discord
+          </a>
+          <a
+            href="https://youtube.com/@rhainx?si=3aghKJ_s0v_Pyq-J"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+            aria-label="YouTube"
+          >
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    burgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      burgerMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          burgerMenu.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

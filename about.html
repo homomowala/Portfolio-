@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About AiNX - Discord & Minecraft Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Purple gradient sidebar */
+      .purple-side-bar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 100vh;
+        background: linear-gradient(180deg, #7b2ff7, #f107a3);
+        z-index: 1000;
+      }
+      /* Active nav link purple */
+      .nav-links a.active {
+        color: #7b2ff7;
+        font-weight: 700;
+      }
+    </style>
+</head>
+<body>
+
+  <div class="purple-side-bar"></div>
+
+  <div class="page-container">
+    <header>
+      <a href="index.html" class="logo">
+        <span class="logo-circle"></span>
+        AiNX
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-contact-header">Contact</a>
+      <button class="burger-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-section">
+        <h1 class="page-title">About AiNX</h1>
+        <p class="page-description">
+          Hey! I’m AiNX — a passionate developer focused on creating innovative Minecraft and Discord experiences. I love crafting futuristic and engaging projects that elevate gaming communities.
+        </p>
+        <p class="page-description">
+          With expertise in bot development, server management, and custom game features, I aim to blend creativity with cutting-edge technology to bring your ideas to life. Let’s build something epic together!
+        </p>
+        <!-- Add more about skills or projects here if you want -->
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    burgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      burgerMenu.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          burgerMenu.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

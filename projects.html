@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - AiNX Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Purple gradient sidebar */
+    .purple-side-bar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 100vh;
+      background: linear-gradient(180deg, #7b2ff7, #f107a3);
+      z-index: 1000;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border: 1px solid #7b2ff7; /* purple border */
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      box-shadow: 0 4px 20px rgba(123, 47, 247, 0.3);
+    }
+
+    .project-card h3 {
+      color: #7b2ff7; /* purple */
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: #666666; /* grey-text fallback */
+      margin-bottom: 15px;
+    }
+
+    .project-card .btn {
+      background-color: #7b2ff7; /* purple */
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .project-img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
+    }
+
+    /* Active nav link purple */
+    .nav-links a.active {
+      color: #7b2ff7;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="purple-side-bar"></div>
+
+  <div class="page-container">
+    <header>
+      <a href="index.html" class="logo">
+        <span class="logo-circle"></span>
+        AiNX
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-contact-header">Contact</a>
+      <button class="burger-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-section">
+        <h1 class="page-title">My Projects</h1>
+        <p class="page-description">
+          This is a Minecraft Survival setup made by me. It includes various systems such as skills,
+          economy, cosmetics, crates, and more. Below are the main features with screenshots.
+        </p>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="images/features.png" alt="Features" class="project-img" />
+            <h3>Features</h3>
+            <p>Overview of the full survival setup with key plugins and custom systems.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="images/cosmetics.png" alt="Cosmetics" class="project-img" />
+            <h3>Cosmetics</h3>
+            <p>Players can equip hats, particles, and more to personalize their gameplay.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="images/bank.png" alt="Bank System" class="project-img" />
+            <h3>Bank System</h3>
+            <p>Deposit and withdraw money for a secure survival economy.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="images/enchants.png" alt="Custom Enchants" class="project-img" />
+            <h3>Custom Enchants</h3>
+            <p>Over 50+ unique enchantments beyond vanilla Minecraft.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="images/crates.png" alt="Crates" class="project-img" />
+            <h3>Crates</h3>
+            <p>Reward system with keys and epic loot from vote, rare, and epic crates.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="images/economy.png" alt="Economy System" class="project-img" />
+            <h3>Economy System</h3>
+            <p>A well-balanced economy with jobs, shops, and trading systems.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="images/randomtp.png" alt="Random Teleport" class="project-img" />
+            <h3>RandomTP</h3>
+            <p>Players can teleport to a random location to start their adventure.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="images/skills.png" alt="Skills System" class="project-img" />
+            <h3>Skills</h3>
+            <p>Level up mining, fishing, woodcutting, and other RPG-style skills.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="images/theforge.png" alt="The Forge" class="project-img" />
+            <h3>The Forge</h3>
+            <p>Custom item crafting and upgrading using a special forge GUI system.</p>
+          </div>
+        </div>
+
+        <p class="page-description" style="margin-top: 40px;">
+          More features and updates coming soon!
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const burgerMenu = document.querySelector(".burger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      burgerMenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navLinks.classList.contains("active")) {
+          navLinks.classList.remove("active");
+          burgerMenu.classList.remove("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
